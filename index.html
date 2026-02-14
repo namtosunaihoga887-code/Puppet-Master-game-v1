@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puppet Master - Web Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div id="score">Score: <span id="score-value">0</span></div>
+            <div id="tool-selector">
+                <button id="hand-tool" class="tool-btn active" data-tool="drag">Drag</button>
+                <button id="hammer-tool" class="tool-btn" data-tool="hammer">Hammer</button>
+                <button id="knife-tool" class="tool-btn" data-tool="knife">Knife</button>
+                <button id="nail-tool" class="tool-btn" data-tool="nail">Nail</button>
+                <button id="fire-tool" class="tool-btn" data-tool="fire">Fire</button>
+            </div>
+            <div id="controls">
+                <button id="reset-btn">Reset Puppet</button>
+                <button id="slowmo-btn">Slow Motion</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

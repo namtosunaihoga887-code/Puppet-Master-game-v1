@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background-color: #1a1a1a;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    pointer-events: none; /* Allow clicks to pass through to the canvas */
+    z-index: 10;
+}
+
+#ui-overlay > * {
+    pointer-events: auto; /* Re-enable pointer events for UI elements */
+}
+
+#score {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#tool-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.tool-btn {
+    background: rgba(50, 50, 50, 0.8);
+    color: white;
+    border: 2px solid #555;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+    pointer-events: auto;
+}
+
+.tool-btn:hover {
+    background: rgba(70, 70, 70, 0.9);
+    transform: translateY(-2px);
+}
+
+.tool-btn.active {
+    background: rgba(100, 100, 100, 0.9);
+    border-color: #ffcc00;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#controls button {
+    background: rgba(150, 50, 50, 0.8);
+    color: white;
+    border: 2px solid #cc5555;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s;
+    pointer-events: auto;
+}
+
+#controls button:hover {
+    background: rgba(180, 70, 70, 0.9);
+    transform: translateY(-2px);
+}
+
+#slowmo-btn.active {
+    background: rgba(50, 150, 50, 0.8);
+    border-color: #55cc55;
+}
